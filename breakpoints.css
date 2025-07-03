@@ -142,7 +142,7 @@ button {
 
 /* Smartphones */
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 250px) and (max-width: 767px) {
   
     .navbar, .contato {
         background-color: lightgreen;
