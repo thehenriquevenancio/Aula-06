@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.itens li {
+    list-style: none;
+    color: black;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.main {
+    width: 100%;
+    height: 450px;
+    background-color: gray;
+}
+
+.titulo-lg {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+}
+
+.titulo-md {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+}
+
+.titulo-sm {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    border: 2px solid black;
+    background-color: gray;
+    min-width: 350px;
+    min-height: 200px;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 250px;
+    background-color: lightgray;
+}
+
+.rodape {
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+form {
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  box-sizing: border-box;
+}
+
+input {
+  padding: 0 15px;
+}
+
+button {
+  background: black;
+  color: white;
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    .navbar, .contato {
+        background-color: lightblue;
+    }
+
+    .main, .rodape, .card, button {
+        background-color: blue;
+    }
+}
+
+/* Smartphones */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .navbar, .contato {
+        background-color: lightgreen;
+    }
+
+    .main, .rodape, .card, button {
+        background-color: green;
+    }
+
+}
