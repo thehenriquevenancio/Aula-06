@@ -1,0 +1,90 @@
+ /* 1. Estilos básicos e reset */
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ /* 2. O Contêiner Principal com a Lógica do Grid */
+ .grid-container {
+     display: grid;
+     /* Define as áreas nomeadas do grid */
+     grid-template-areas:
+         "header header header"
+         "nav    content aside"
+         "footer footer footer";
+
+     /* Define as larguras das colunas: a navegação com 200px, o conteúdo flexível (1fr), e a barra lateral com 250px */
+     grid-template-columns: 200px 1fr 250px;
+
+     /* Define a altura das linhas: cabeçalho e rodapé com altura automática, e a linha do meio ocupa todo o espaço restante (1fr) */
+     grid-template-rows: auto 1fr auto;
+
+     /* Define um espaçamento (gap) entre os elementos do grid */
+     gap: 12px;
+
+     /* Faz o container ocupar 100% da altura da tela */
+     min-height: 100vh;
+ }
+
+ /* 3. Atribuição das áreas e estilização dos elementos */
+ .header {
+     grid-area: header;
+     /* Atribui este elemento à área 'header' */
+     background-color: #0077b6;
+     color: white;
+     padding: 1rem;
+     text-align: center;
+ }
+
+ .nav {
+     grid-area: nav;
+     /* Atribui este elemento à área 'nav' */
+     background-color: #caf0f8;
+     padding: 1rem;
+ }
+
+ .nav ul {
+     margin-left: 10px;
+ }
+
+ .main-content {
+     grid-area: content;
+     /* Atribui este elemento à área 'content' */
+     background-color: #f8f9fa;
+     padding: 1.5rem;
+ }
+
+ .aside {
+     grid-area: aside;
+     /* Atribui este elemento à área 'aside' */
+     background-color: #caf0f8;
+     padding: 1rem;
+ }
+
+ .footer {
+     grid-area: footer;
+     /* Atribui este elemento à área 'footer' */
+     background-color: #023e8a;
+     color: white;
+     padding: 1rem;
+     text-align: center;
+ }
+
+ /* Bônus: Tornando o layout responsivo para telas menores */
+ @media (max-width: 768px) {
+     .grid-container {
+         /* Altera a estrutura do grid para uma única coluna em telas menores */
+         grid-template-areas:
+             "header"
+             "nav"
+             "content"
+             "aside"
+             "footer";
+
+         /* Define que haverá apenas uma coluna, ocupando todo o espaço */
+         grid-template-columns: 1fr;
+         /* As linhas terão altura automática */
+         grid-template-rows: auto auto auto auto auto;
+     }
+ }
